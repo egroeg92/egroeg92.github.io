@@ -1,0 +1,504 @@
+@charset "UTF-8";
+/*!
+* Start Bootstrap - Agency v6.0.3 (https://startbootstrap.com/theme/agency)
+* Copyright 2013-2020 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
+*/
+/*!
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #fed136;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #fed136;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #fed136;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+scroll-behavior: smooth;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik","Acumin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    width = 100%;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #212529;
+  text-align: left;
+  background-color: white;
+
+/*cursor:none;*/
+}
+.bodyGrad{
+        background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.2));  
+}
+p {
+    text-align:justify-all;
+    text-justify: inter-word;
+}
+/*
+#cursor{
+    position:absolute;
+    transform:translate(-50%,-50%);
+    height:15px;
+    width:15px;
+    border-radius:50%;
+    background-image: url("../assets/george.png");
+    z-index: 1
+}
+*/
+
+
+.nameHeader{
+    padding-top:11%;
+    font-style: bold;
+    font-size:calc(1.5rem + 2vw);
+}
+.header{
+    font-style: medium;
+    font-size:2rem;
+}
+.footer{
+    font-size:.7rem;
+    color:rgba(0,0,0,.5);
+}
+.sub-header{
+    font-style: medium;
+    font-size:1.5rem;
+}
+.text-center {
+   text-align:center;
+}
+.text-justify {
+   text-align:justify;
+}
+.paddingrtb-3{
+    padding-right: 3vw;
+    padding-top:3vs;
+    padding-bottom :3vw;
+    padding-left:1vw;
+}
+.padding-3{
+    padding :3vw;
+}
+
+.padding-1{
+    padding :1vw;
+}
+.margin-3{
+    margin :3vw;
+}
+.margin-2{
+    margin-left :2vw;
+    margin-right:2vw;
+    margin-bottom: 2vw;
+}
+.padding-2{
+    padding-left :2vw;
+    padding-right:2vw;
+    padding-bottom: 2vw;
+}
+.margin-t-5{
+    margin-top :5vh;
+}
+.margin-b-1{
+    margin-bottom :1vh;
+}
+.vertical-center {
+  min-height: 100%;  
+  min-height: 100vh; 
+
+  display: flex;
+  align-items: center;
+}
+
+.line{
+
+    border-style : none none solid none ;
+    border-color : black;
+    border-width : thin;
+    width:100%;
+    margin-bottom:5vh;
+    margin-top:5vh;
+
+}
+
+
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/*navBar*/
+#mainNav {
+    margin:0 auto;
+    
+    font-size:calc(1rem + .1vw)
+    position: absolute;
+    width:100%;   
+}
+#mainNav::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+
+/*nav*/
+.navbar{
+/*    position: absolute;*/
+    margin:0;
+    background-color:aqua;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.navbar.scrolled {
+    transform: translateY(-1vh);
+}
+.navbar .navbar-brand:hover{
+    transform: scale(1.05,1.05);
+    transition: .3s;
+}
+.landing{
+    min-height : 100vh;
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+   
+}
+.landing .text{
+    margin-top:10vh;
+}
+
+#about{
+    min-height:100vh;
+}
+#about .about{
+    padding-bottom: 5%;
+}
+#portfolio{
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#portfolio .portfolio-item {
+  max-width: 25rem;
+    position: relative;
+    border-radius:2%;
+
+}
+#portfolio .portfolio-item .portfolio-link {
+  display: block;
+  margin: 0 auto;
+    border-radius:2%;
+
+    overflow:hidden;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity ease-in-out 0.3s;
+    border-radius:2%;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+  font-size: 1.25rem;
+  color: black;
+    padding: 1rem;
+      text-align: justify;
+  text-justify: inter-word;
+    
+}
+#portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
+  transition:.5s;
+    opacity: .9;
+    z-index: +1;
+/*    transform:scale(1.1)*/
+}
+#portfolio .portfolio-item .portfolio-link:hover .img-hover {
+  transition:.5s;
+/*    opacity: 1;*/
+    z-index: -1;
+    transform:scale(1.1)
+    
+    
+}
+.img-hover{
+    opacity:1;
+    
+}
+.img-fluid{
+    width:100%;
+    height:auto;
+}
+.anim {
+    opacity: 0;
+}
+@keyframes anim1{
+    from{
+/*        transform: translateY(-100px);*/
+        opacity: 0;
+        transform: scale(.95,.95);
+
+    }
+    to{
+/*        transform: translateY(0);*/
+        opacity: 1;
+        transform: scale(1,1);
+
+    }
+}
+@keyframes anim2{
+    from{
+/*        transform: translateX(-100vh);*/
+        opacity: 0;
+        transform: scale(.95,.95) translateX(-2vw);
+
+    }
+    to{
+/*        transform: translateX(0vw);*/
+        opacity: 1;
+        transform: scale(1,1) translateX(0vw);
+
+    }
+}
+@keyframes anim3{
+    from{
+/*        transform: translateX(-100vh);*/
+        opacity: 0;
+        transform: scale(.99,.99) translateY(3vh);
+
+    }
+    to{
+/*        transform: translateX(0vw);*/
+        opacity: 1;
+        transform: scale(1,1) translateY(0vh);
+
+    }
+}
+@keyframes blink {
+    0% { box-shadow: 0 0 1vw rgba(0,0,0,.2); }
+    50% { box-shadow: none; }
+    100% { box-shadow: 0 0 1vw rgba(0,0,0,.2); }
+}
+
+@-webkit-keyframes blink {
+    0% { box-shadow: 0 0 1vw rgba(0,0,0,.2); }
+    50% { box-shadow: none; }
+    100% { box-shadow: 0 0 1vw rgba(0,0,0,.2); }
+}
+
+.shadow-blink {
+    
+    -webkit-animation: blink 5.0s linear infinite;
+    -moz-animation: blink 5.0s linear infinite;
+    -ms-animation: blink 5.0s linear infinite;
+    -o-animation: blink 5.0s linear infinite;
+    animation: blink 5.0s linear infinite;
+}
+@keyframes blink-text {
+    0% { text-shadow: 0 0 2vw rgba(0,0,0,.3); }
+    50% { text-shadow: none; }
+    100% { text-shadow: 0 0 2vw rgba(0,0,0,.3); }
+}
+
+@-webkit-keyframes blink-text {
+    0% { text-shadow: 0 0 2vw rgba(0,0,0,.3); }
+    50% { text-shadow: none; }
+    100% { text-shadow: 0 0 2vw rgba(0,0,0,.3); }
+}
+
+@keyframes breathing-tex-anim {
+    0% { transform:scale(1,1); }
+    50% { transform:scale(1.1,1.1); }
+    100% { transform:scale(1,1); }
+}
+
+@-webkit-keyframes breathing-tex-anim {
+    0% { transform:scale(1,1); }
+    50% { transform:scale(1.1,1.1); }
+    100% { transform:scale(1,1); }
+}
+.shadow-blink-text {
+    
+    -webkit-animation: blink-text 5.0s linear infinite;
+    -moz-animation: blink-text 5.0s linear infinite;
+    -ms-animation: blink-text 5.0s linear infinite;
+    -o-animation: blink-text 5.0s linear infinite;
+    animation: blink-text 5.0s linear infinite;
+}
+.breathing-text {
+    
+    -webkit-animation: breathing-tex-anim 20.0s linear infinite;
+    -moz-animation: breathing-tex-anim 20.0s linear infinite;
+    -ms-animation: breathing-tex-anim 20.0s linear infinite;
+    -o-animation: breathing-tex-anim 20.0s linear infinite;
+    animation: breathing-tex-anim 20.0s linear infinite;
+}
+
+
+#contact{
+    height:45vh;
+    background-color: white;
+}
+
+.shadow{
+    box-shadow: 0 0 0 3px #cde1f8;
+}
+.socials {
+  padding: 1rem ;
+}
+.socials .contact-item{
+    margin-top:2rem;
+    width:25%;
+}
+.socials .contact-item:hover{
+      transition:.5s;
+
+    transform:scale(1.1)
+
+}
+.socials .contact-item .contact-link{
+    display: block;
+    margin: 0 auto;
+    border-radius:2%;
+    overflow:hidden;
+}
+.socials .iconRow .iconItem {
+    max-width: 10%;
+    position: relative;
+    border-radius:2%;
+    padding: .8rem;
+  border-radius: 50%;
+  line-height: 1;
+  margin: 0 15px 0 0;
+  background-color:rgba(0,0,0,.2);
+  transition: all 500ms ease;
+}
+
+.socials .iconRow .iconItem:hover {
+  background-color: #0078ff;
+  color: #fff;
+  box-shadow: 0 0 0 3px #cde1f8;
+  transition: all 500ms ease;
+}
+
+.contacts-box{
+    margin:2rem;
+    margin-bottom: 2rem;
+    width=80%;
+    height:80%;
+/*    border-color: rgba(255, 255, 255,.1);*/
+    background-color: rgba(255, 255, 255,.5);
+/*    border-radius:50%;*/
+    border-radius:.5rem!important
+}
+.topScroll{
+    position: fixed;
+    right: 5vw;
+    bottom: 5vh;
+    opacity: 0;
+/*        text-decoration: none;*/
+    z-index: 11;
+
+}
+
+.topScroll.top-appear{
+
+    opacity: 1;
+    transition: all 500ms ease;
+}
+a, a:visited , a:link{
+    background-color: transparent;
+    text-decoration: none;
+    transition: all 500ms ease;
+
+
+}
+a:hover{
+    transition: all 500ms ease;
+  background-color: transparent;
+
+}
+.topScrollHover,.topScrollHover:visited , .topScrollHover:link{
+    color:rgba(0,0,0,.6);
+    background-color: transparent;
+    text-decoration: none;
+    transition: all 500ms ease;
+    text-decoration: none;
+}
+.topScrollHover:hover{
+    color:rgba(0,0,0,.2);
+    background-color: transparent;
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+.proccess{
+    
+}
+

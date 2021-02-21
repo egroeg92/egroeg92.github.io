@@ -1,3 +1,6 @@
+//Written By George Macrae 
+//Feb 2021
+
     
         const images = document.querySelectorAll('.anim');
 

@@ -460,13 +460,43 @@ p {
 .contacts-box{
     margin:2rem;
     margin-bottom: 2rem;
-    width=80%;
+    width:80%;
     height:80%;
 /*    border-color: rgba(255, 255, 255,.1);*/
     background-color: rgba(255, 255, 255,.5);
 /*    border-radius:50%;*/
     border-radius:.5rem!important
 }
+
+.skills-bar{
+    text-align: left;
+    color: black;
+
+}
+.skill-bar{
+    background-color: #9b9b9b;
+    border-radius:.5vh;
+    height : 1vh;
+    /* opacity:0; */
+    width:0%;
+}
+
+@keyframes bar-anim {
+    0% { width:0%}
+    50% { opacity: .9;}      
+    100% { width:var(--custom-width);
+    opacity : .9;}
+}
+
+@-webkit-keyframes bar-anim {
+    0% { width:0%;}
+    50% { opacity: .9;}      
+    100% { width:var(--custom-width);
+        opacity : .9; }
+}
+
+
+
 .topScroll{
     position: fixed;
     right: 5vw;
@@ -508,7 +538,5 @@ a:hover{
     transition: all 500ms ease;
 }
 
-.proccess{
-    
-}
+
 

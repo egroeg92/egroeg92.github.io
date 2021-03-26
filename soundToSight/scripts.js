@@ -52,13 +52,8 @@ function handleFileSelect(evt) {
     loop_i=0;
     loop_x=0;
     loop_y=0;
-
-
     var files = evt.target.files; // FileList object
     file = files[0];
-
-    console.log(files);
-
 }
 
 function playFile() {
@@ -105,7 +100,7 @@ async function loadData(){
 
             }
         catch(e){
-                console.log("already loaded bitch");
+                console.log("load error");
                 return false;
         }
     }
@@ -523,7 +518,6 @@ function resetCanvas(){
     loop_y=0;
 }
 function displayFreq(){
-    console.log("display freq "+displayFrequency);
     displayFrequency = !displayFrequency;
 }
 function changeMinAmp(){
@@ -549,8 +543,6 @@ function changeMaxFreq(){
 }
 function changeMinFreq(){
     freqRange_min = document.getElementById("minFreq").value;
-    console.log(freqRange_min + " min");
-    console.log(freqRange_max + " max");
     
     if( parseInt(freqRange_min) > parseInt(freqRange_max)){
         
@@ -612,7 +604,6 @@ window.onload = function setListner(){
         loading_msg.innerHTML="Loading...";
 
         var loaded = await loadData();
-        console.log(loaded);
         if (loaded){
 
             resetCanvas();
@@ -623,6 +614,7 @@ window.onload = function setListner(){
 
         }
         loading_msg.innerHTML="Done.";
+        freq_bars_bool=true;
     }
 
     document.getElementById('play').onclick = async function(){
@@ -636,7 +628,6 @@ window.onload = function setListner(){
                     setUpCanvas(songLength);
                 }
 
-                console.log(loop_i/1000);
                 startBufferAtTime(loop_i/1000);
                 loop(songLength,interval);
                 

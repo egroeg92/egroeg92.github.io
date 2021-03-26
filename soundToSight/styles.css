@@ -77,8 +77,8 @@ p{
 
 }
 .web-app-container{
-  height:100%;
-  width:auto;
+  margin-top: 3vh;
+  margin-bottom:5vh;
 }
 
 .fullHeight{

@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+
+}
+h1{
+  font-size: 2rem;
+  font-style: bold;
+  /* margin-bottom : 1.5rem; */
+
+}
+h2{
+  font-size: 1.2rem;
+  font-style: bold;
+  margin-bottom : 1.5rem;
+
+}
+h4{
+  margin-bottom : 1.2rem;
+  margin-top:1.1rem;
+}
+
+h6{
+  font-size:1.05rem;
+  font-style: semi-bold;
+  margin-top: 1.1rem;
+}
+.instructions{
+  padding:1rem;
+}
+margin-2{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  
+}
+p{
+  line-height: 1.8;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.pad-0{
+  padding : 0;
+}
+/*nav*/
+.navbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+
+  
+}
+.canvas{
+  /* display: block; */
+  border:1px solid #d3d3d3;
+  margin-top:2rem;
+
+}
+#myCanvas{
+    width: 25vw;
+    height: 25vw;
+    border:1px solid #d3d3d3;
+}
+
+
+.pg-section{
+  /* min-height:80vh; */
+  padding-top: 6vh;
+  width:auto
+
+}
+.web-app-container{
+  height:100%;
+  width:auto;
+}
+
+.fullHeight{
+  /* height:100%; */
+  width:auto;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.inputs{
+  padding-top : .5vw;
+}
+
+
+
+.codeContainer{
+  /* width : 100%; */
+  padding:1vw;
+}
+
+
+.prettyprintContainer{
+    display: block; background-color: #333
+}
+/* desert scheme ported from vim to google prettify */
+pre.prettyprint { display: block; background-color: #333 }
+pre .nocode { background-color: none; color: #000 }
+pre .str { color: #ffa0a0 } /* string  - pink */
+pre .kwd { color: #f0e68c; font-weight: bold }
+pre .com { color: #87ceeb } /* comment - skyblue */
+pre .typ { color: #98fb98 } /* type    - lightgreen */
+pre .lit { color: #cd5c5c } /* literal - darkred */
+pre .pun { color: #fff }    /* punctuation */
+pre .pln { color: #fff }    /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0 } /* attribute value - pink */
+pre .dec { color: #98fb98 } /* decimal         - lightgreen */
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+@media print {
+  pre.prettyprint { background-color: none }
+  pre .str, code .str { color: #060 }
+  pre .kwd, code .kwd { color: #006; font-weight: bold }
+  pre .com, code .com { color: #600; font-style: italic }
+  pre .typ, code .typ { color: #404; font-weight: bold }
+  pre .lit, code .lit { color: #044 }
+  pre .pun, code .pun { color: #440 }
+  pre .pln, code .pln { color: #000 }
+  pre .tag, code .tag { color: #006; font-weight: bold }
+  pre .atn, code .atn { color: #404 }
+  pre .atv, code .atv { color: #060 }
+}

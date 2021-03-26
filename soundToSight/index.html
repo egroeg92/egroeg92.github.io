@@ -1,0 +1,383 @@
+<html>
+    <head>
+        <title>Sound to Image</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik"> -->
+        
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    
+    </head>
+    <body>
+        <header>
+            <!-- nav -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand " href="#web-app">Sound to Image</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+                  <div class="navbar-nav float-right text-right pr-3">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#wut">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#how">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inputs">Inputs</a>
+                      </li>
+                    
+                  </ul>
+                </div>
+              </nav>
+
+              
+        </header>
+
+        <div class = "container-fluid">
+            
+
+            
+            <section class="pg-section  " id = "web-app">
+                <div class= "container web-app-container"  >
+                    <div class = "row fullHeight " id="input_container"  >
+                        <div class= "col-md-6  my-auto">
+                            <div class="row">
+                            <canvas class = "canvas" id ="myCanvas"  >
+                                Your browser does not support the HTML5 canvas</canvas>
+                            </div>
+
+
+
+
+                        </div>
+                        
+                        <div class= "col-md-6 my-auto">
+                            <div class="row instructions border">
+                                <h5>Instructions</h5>
+                                1) Upload a Sound File<br>
+                                2) Set Parameters<br>
+                                3) Press "Real-Time Conversion" to the sound converted to an image in real time.<br>
+                                OR<br>
+                                3) Press "Fast Conversion" for it to be converted quickly
+                            </div>
+                            <div class = "row instructions border">
+                                
+                                <div class="col-12 inputs"><input  id="files" type="file" id="files" name="files[]" multiple /></div>
+                                <div class="col-12 inputs"><label for="interval">Frequency Interval (ms): </label><input id="interval" type="number" value="100" min="0" onchange="changeColorMethod()"/></div>
+                                <div class="col-12 inputs"><label for="add">Colour Addition Algorithm (1-3) </label><input id="add" type="number" value="3" min="1" max="3" /></div>
+
+                                <div class="col-6 inputs"><label for="maxAmp">Minimum Amplitude (0-255): </label><input type="number" id="minAmp" min="0" max="255" value ="75" onchange="changeMinAmp()"></div>
+                                <div class="col-6 inputs"><label for="maxAmp">Maximum Amplitude (0-255): </label><input type="number" id="maxAmp" min="0" max="255" value ="255" onchange="changeMaxAmp()"></div>
+                                
+                                <div class="col-6 inputs"><label for="minFreq">Minimum Frequency (0-20000) : </label><input type="number" id="minFreq" min="0" max="20000" value ="0" onchange="changeMinFreq()"></div>
+                                <div class="col-6 inputs"><label for="maxFreq">Maximum Frequency (0-20000) : </label><input type="number" id="maxFreq" min="0" max="20000" value ="20000" onchange="changeMaxFreq()"></div>
+
+                                <div class="col-6 inputs"><input id="play" type="button" value="Real-Time Conversion" />
+                                </div>
+                                <div class="col-6 inputs">
+                                    
+                                    <input id="instant" type="button" value="Fast Conversion" />
+                                    <div id="loading"></div>
+
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-12">
+                            <div class = "row">
+                            <canvas class = "canvas" id ="freqCanvas" >
+                                Your browser does not support the HTML5 canvas</canvas>
+                            </div>
+                            <div class= "row">
+                                <label class="switch" >
+                                    <input type="checkbox" checked onclick="displayFreq()">
+                                    <span class="slider"></span>
+                                </label>
+                                Show Frequency Bars (processor heavy)
+
+                            </div>
+                        </div>
+
+                    </div>
+                   
+                </div>
+            </section>
+
+            <div class= "container">
+                
+                <section class="pg-section fullHeight" id = "wut">
+                    <div class = "row fullHeight">
+                        <div class="col-md-10 my-auto pad-0">
+                            <div class="row">
+                            <h1>How do you describe sound?</h1>
+                            </div>
+                            <div class="row ">
+                                <div class="col-10 pad-0">
+                            <p>
+                                As humans, our perception of the world is limited to our five senses; sight, hearing, touch, smell and taste.
+                                 Something that makes us human is our ability to express ourselves through different mediums that are observed through these senses.
+                                  Some examples of these expressions are paintings, recipes, and music.
+                                  <br><br>
+                                  
+                                  Unfortunately, not everyone has all five senses and therefore
+                                   is limited to certain forms of expression. But what if we were able to accurately describe forms of expression to different senses 
+                                   in a way that people without the ability of the intended sense could still experience these forms of expression? In other words,
+                                    what if a deaf person could see a musical composition?<br><br>
+
+                                That specific example of describing a sound as an image is what this application attempts to do. There are so
+                                many complexities and subtle traits that make a song a song making this conversion an incredibly hard task. 
+                                In the end, the output of Sound to Image is just an interpretation of a sound.
+                                     
+                            </p>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+
+            <div class="container ">
+                <section class="pg-section fullHeight" id ="how">
+                    <div class="row fullHeight">
+                        <div class= "col-md-10 my-auto pad-0">
+                            <div class="row">
+                                <h1>How.</h1>
+                            </div>
+
+                            <div class ="row">
+                            <div class="col-md-10 pad-0">
+                            <h4>Concept</h4>
+                                <p>  
+                                    The idea behind Sound to Image is to iterate through a sound file at a set interval and then to map the sound frequencies at each iteration to a colour value.
+                                     Each colour value is then placed onto a canvas sequentially to effectively create an image of the sound.
+                                </p>
+                            </div>
+                            </div>
+                            <div class ="row">
+                            <div class="col-md-10 pad-0">
+                            <h4>Web Audio API</h4>
+
+                                <p>
+                                    Sound to Image uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>,
+                                     a powerful and versatile tool for controlling audio on the web.
+                                    <br>
+                                    <br>
+                                    <i><i>Web Audio API</i></i> is best described as nodes that interact with each other in a pipeline. Each node has input and outputs. An Audio Context contains all the nodes.
+                                     Sound to Image has three different nodes; a source node, an analyzer node and a destination node. The source node is where the audio file is stored and played.
+                                      The destination node is where the audio source is played, in most cases to your computer's speakers. The analyzer is the node that gathers information from the source node,
+                                       in this case, sound frequencies.
+                                    <br>
+                                    <br>
+                                    There are two different play cases: <i>>Real-Time Conversion</i> and <i>Fast-Conversion</i>. <i>Real-Time Conversion</i> connects the source to both the analyzer
+                                     node and the source node. While the song plays, the sound is outputted from the source to both the analyzer and the destination in real-time. 
+                                     The effect is that you hear the sound being played and see it being analyzed and converted to colour in real-time. <i>Fast-Conversion</i> only connects 
+                                     the source node to the analyzer node. The sound file is then iterated through at the set interval (much faster than if played in real-time). 
+                                     The analyzer does the conversion for each iteration and then it is printed to the canvas. The destination node is not connected in this case, and so you do not hear any output.
+                                    <br>
+                                    <br>
+                                    The <i>Fast-Conversion's</i> output is less consistent. I'm not entirely sure for the reason of this, but my guess that it is system lag.
+                                </p>
+                            </div>
+                            </div>
+
+                            <div class ="row">
+                            <div class="col-md-10 pad-0">
+                            <h4>Analyzer & Key Algorithms</h4>
+                                <p>
+                                    Although the application is fairly simple there are a few key algorithms that Sound to Image uses. The analyzer node from <i>Web Audio API</i> gets a sound frequency at a passed interval. 
+                                    The returned frequency is within the audible frequency range. Sound to Image takes that sound frequency and maps it to a frequency on the visual frequency range. In other words, 
+                                    Sound to Image converts a given frequency between 20-20000hz and maps it to a corresponding frequency between 400-800tHz. This light frequency is then converted to a wavelength 
+                                    and then that wavelength is converted to an RGB value.
+                                    <br><br>
+                                    Since many frequencies at different magnitudes are picked up at every instance, the frequencies are added based on their amplitude (how loud each frequency is) to a total frequency at that instance. 
+                                    The result is then converted to an RGB and then painted onto the canvas.
+                                </p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="container ">
+                <section class="pg-section fullHeight" id="inputs">
+                    <div class="row fullHeight ">
+                        <div class="col-md-10 my-auto pad-0">
+                            <div class="row">
+                            <h1>User Inputs.</h1>
+                            </div>
+                            <div class="row">
+                                <div class="col-10 pad-0">
+                                <h4>Interval</h4>
+                                <p>
+                                    The interval is measured in milliseconds. It changes how often the analyzer takes in a frequency and converts it to a colour. The lower the interval, the greater the number of computations.
+                                </p>
+                                <h4>Min & Max Amplitude</h4>
+                                <p>
+                                    The amplitude of each frequency is how loud that frequency is heard. The Min & Max Amplitude changes the bounds of what the analyzer takes in such that you can ignore loud sounds or soft buzzes throughout the interpretation. 
+                                </p>
+                                <h4>Min & Max Frequency</h4>
+                                <p>
+                                    Sound to Image works by taking the audible frequency and mapping it to the visual frequency. However, many sounds do not use the entire sound frequency and thus, the colours that correspond to those frequencies that are not played will not be displayed. By changing the Min and Max frequency, you change the scope of the audible frequency to be mapped to colours. This can allow a more dynamic colour pallet with a sound file that has a lower frequency range.  
+                                </p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-10 pad-0">
+                                    <h4>Colour Addition Algorithms</h4>
+                                    
+
+                                    <p>Since the <i>Web Audio API</i> picks up many frequencies at a given instant, it is Sound to Image's job to combine those frequencies into one colour. Sound and Image gives you three different options to combine the frequencies into colours.
+                                    </p>
+                                    <h6>method 1)</h6> </p>This method takes the RGB value of each frequency at an instance and multiplies the R, G, and B values by a fraction directly related to its amplitude. The total RGB that is painted is an addition of each of the colours with non-zero amplitudes at the given instance.
+                                    </p>
+                                    <h6>method 2)</h6> <p>This method converts the frequencies at an instance to RGBa values and then adds them on top of each other sequentially. The issue with this method is very loud frequencies will quickly cover up all the nuance of the quiet frequencies, since their opacities will be near opaque and will not blend.
+                                    This method was found <a href="https://stackoverflow.com/questions/726549/algorithm-for-additive-color-mixing-for-rgb-values">here</a>.</p>
+                                    <h6>method 3)</h6> <p>Computer RGB values are derived from the square root of photon flux. I used the below formula to add the R, G, B values and used the Alpha value of the colour to be added as my t value.                                     This method was found <a href="https://stackoverflow.com/questions/726549/algorithm-for-additive-color-mixing-for-rgb-values">here</a>.
+                                    </p>
+
+                                    <div class="codeContainer"><div class="prettyprintContainer">
+                                        <pre><code class="prettyprint">                                    
+    blendColorValue(a, b, t){
+        return sqrt((1 - t) * a^2 + t * b^2)
+    }
+                                        </code></pre>
+                                    </div></div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="container">
+                <section class="pg-section fullHeight" id="footer">
+                    <div class="row fullHeight ">
+                        <div class="col-md-10 my-auto  ">
+                            <div>                                
+                                <iframe width="420" height="315"
+                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+                                    
+                                    
+            <div class="container-fluid ">
+                <section class="pg-section fullHeight" id="footer">
+                    <div class="row fullHeight d-flex justify-content-center margin-2 ">
+                        <div class="col-md-10 my-auto d-flex justify-content-center margin-2 ">
+                            <div>Sound to Image is a web application designed and written by <a href="https://georgemacrae.ca/">George Macrae</a> as an independent
+                            research project for Quinn Keavery's IntD 210 Design for Screens Class at Emily Carr University of Art and Design.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                                <!-- <iframe width="420" height="315"
+                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                                </iframe> -->
+                                
+                 <!---               
+                        </div>
+
+                            <div class = "col-md-5 codeContainer">
+                            <div class = "prettyprintContainer">
+                                <pre>
+                                    <code class="prettyprint">
+    //Wavelength to rgb value
+    //modified from 
+    //http://www.physics.sfasu.edu/astro/color/spectra.html
+    async function getRgb(f){
+                            
+    var wl = getColorWaveLength(f);
+        var r = 0;
+        var g = 0;
+        var b = 0;
+        if(wl >= 380 && wl < 440){
+            r = -255 * (wl-440)/(60);
+            g = 0;
+            b = 255;
+        }
+        else if ( wl >= 440 && wl < 490 ){
+            r = 0;
+            g = 255*(wl-440)/(50);
+            b = 255;
+        }
+        else if(wl >= 490 && wl < 510){
+            r = 0;
+            g = 255;
+            b = -255*(wl-510)/(20);
+        }
+        else if(wl>=510 && wl< 580){
+            r = 255*(wl - 510)/(70);
+            g = 255;
+            b = 0;
+        }
+        else if(wl >= 580 && wl < 645){
+            r = 255;
+            g = -255*(wl-645)/65;
+            b = 0;
+        }
+        else{ //645 - 780
+            r = 255;
+            g = 0;
+            b  = -255*(wl-780)/135;
+        }
+        return [Math.round(r),Math.round(g),Math.round(b)];
+    } 
+                                    </code>
+                                </pre>
+    
+                            </div>
+                        </div>
+                   
+                        
+                    </div>
+                </section>
+                <div class="row">
+                <section id="footer">
+                    <div class="footer">
+                        Sound to Image is a web application designed and written by <a href="https://georgemacrae.ca/">George Macrae</a> as an independent
+                        research project for Quinn Keavery's IntD 210 Design for Screens Class at Emily Carr University of Art and Design. 
+                    </div>
+                </section>
+            </div>
+                <!-- <section class="pg-section" id="video">
+                    <div class = "row">
+                        <h1>a video for some reason</h1>
+                    </div>
+                </section> -->
+
+            </div>
+
+        </div>
+
+
+        
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+        <script src=scripts.js></script>
+    </body>
+</html>

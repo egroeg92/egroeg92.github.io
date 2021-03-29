@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Sound to Image</title>
+        <title>Sound to Sight</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -17,7 +17,7 @@
         <header>
             <!-- nav -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand " href="#web-app">Sound to Image</a>
+                <a class="navbar-brand " href="#web-app">Sound to Sight</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -76,8 +76,8 @@
                                 <div class="col-6 inputs"><label for="maxAmp">Minimum Amplitude (0-255): </label><input type="number" id="minAmp" min="0" max="255" value ="75" onchange="changeMinAmp()"></div>
                                 <div class="col-6 inputs"><label for="maxAmp">Maximum Amplitude (0-255): </label><input type="number" id="maxAmp" min="0" max="255" value ="255" onchange="changeMaxAmp()"></div>
                                 
-                                <div class="col-6 inputs"><label for="minFreq">Minimum Frequency (0-20000) : </label><input type="number" id="minFreq" min="0" max="20000" value ="0" onchange="changeMinFreq()"></div>
-                                <div class="col-6 inputs"><label for="maxFreq">Maximum Frequency (0-20000) : </label><input type="number" id="maxFreq" min="0" max="20000" value ="20000" onchange="changeMaxFreq()"></div>
+                                <div class="col-6 inputs"><label for="minFreq">Minimum Frequency (0-20000): </label><input type="number" id="minFreq" min="0" max="20000" value ="0" onchange="changeMinFreq()"></div>
+                                <div class="col-6 inputs"><label for="maxFreq">Maximum Frequency (0-20000): </label><input type="number" id="maxFreq" min="0" max="20000" value ="20000" onchange="changeMaxFreq()"></div>
 
                                 <div class="col-6 inputs"><input id="play" type="button" value="Real-Time Conversion" />
                                 </div>
@@ -120,7 +120,7 @@
                             <div class="row">
                             <h1>How do you describe sound?</h1>
                             </div>
-                            <div class="row ">
+                            <div class="row border-left">
                                 <div class="col-md-10     col-10 pad-0">
                             <p>
                                 As humans, our perception of the world is limited to our five senses; sight, hearing, touch, smell and taste.
@@ -135,7 +135,7 @@
 
                                 That specific example of describing a sound as an image is what this application attempts to do. There are so
                                 many complexities and subtle traits that make a song a song making this conversion an incredibly hard task. 
-                                In the end, the output of Sound to Image is just an interpretation of a sound.
+                                In the end, the output of Sound to Sight is just an interpretation of a sound.
                                      
                             </p>
                         </div>
@@ -152,29 +152,26 @@
                     <div class="row fullHeight">
                         <div class= "col-md-10  col-10 my-auto pad-0">
                             <div class="row">
-                                <h1>How.</h1>
+                                <h1>How Sound to Sight works.</h1>
                             </div>
 
-                            <div class ="row">
-                            <div class="col-md-10     col-10 pad-0">
-                            <h4>Concept</h4>
-                                <p>  
-                                    The idea behind Sound to Image is to iterate through a sound file at a set interval and then to map the sound frequencies at each iteration to a colour value.
-                                     Each colour value is then placed onto a canvas sequentially to effectively create an image of the sound.
-                                </p>
-                            </div>
-                            </div>
-                            <div class ="row">
-                            <div class="col-md-10     col-10 pad-0">
+                            <div class ="row border-left">
+                                <div class="col-md-10     col-10 pad-0">
+                                <h4>Concept</h4>
+                                    <p>  
+                                        The idea behind Sound to Sight is to iterate through a sound file at a set interval and then to map the sound frequencies at each iteration to a colour value.
+                                        Each colour value is then placed onto a canvas sequentially to effectively create an image of the sound.
+                                    </p>
+                               
                             <h4>Web Audio API</h4>
 
                                 <p>
-                                    Sound to Image uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>,
+                                    Sound to Sight uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>,
                                      a powerful and versatile tool for controlling audio on the web.
                                     <br>
                                     <br>
                                     <i><i>Web Audio API</i></i> is best described as nodes that interact with each other in a pipeline. Each node has input and outputs. An Audio Context contains all the nodes.
-                                     Sound to Image has three different nodes; a source node, an analyzer node and a destination node. The source node is where the audio file is stored and played.
+                                     Sound to Sight has three different nodes; a source node, an analyzer node and a destination node. The source node is where the audio file is stored and played.
                                       The destination node is where the audio source is played, in most cases to your computer's speakers. The analyzer is the node that gathers information from the source node,
                                        in this case, sound frequencies.
                                     <br>
@@ -188,16 +185,12 @@
                                     <br>
                                     The <i>Fast-Conversion's</i> output is less consistent. I'm not entirely sure for the reason of this, but my guess that it is system lag.
                                 </p>
-                            </div>
-                            </div>
-
-                            <div class ="row">
-                            <div class="col-md-10     col-10 pad-0">
+                           
                             <h4>Analyzer & Key Algorithms</h4>
                                 <p>
-                                    Although the application is fairly simple there are a few key algorithms that Sound to Image uses. The analyzer node from <i>Web Audio API</i> gets a sound frequency at a passed interval. 
-                                    The returned frequency is within the audible frequency range. Sound to Image takes that sound frequency and maps it to a frequency on the visual frequency range. In other words, 
-                                    Sound to Image converts a given frequency between 20-20000hz and maps it to a corresponding frequency between 400-800tHz. This light frequency is then converted to a wavelength 
+                                    Although the application is fairly simple there are a few key algorithms that Sound to Sight uses. The analyzer node from <i>Web Audio API</i> gets a sound frequency at a passed interval. 
+                                    The returned frequency is within the audible frequency range. Sound to Sight takes that sound frequency and maps it to a frequency on the visual frequency range. In other words, 
+                                    Sound to Sight converts a given frequency between 20-20000hz and maps it to a corresponding frequency between 400-800tHz. This light frequency is then converted to a wavelength 
                                     and then that wavelength is converted to an RGB value.
                                     <br><br>
                                     Since many frequencies at different magnitudes are picked up at every instance, the frequencies are added based on their amplitude (how loud each frequency is) to a total frequency at that instance. 
@@ -214,11 +207,11 @@
                 <section class="pg-section fullHeight" id="inputs">
                     <div class="row fullHeight ">
                         <div class="col-md-10     col-10 my-auto pad-0">
-                            <div class="row">
+                            <div class="row ">
                             <h1>User Inputs.</h1>
                             </div>
-                            <div class="row">
-                                <div class="col-10 pad-0">
+                            <div class="row ">
+                                <div class="col-10 pad-0 border-left">
                                 <h4>Interval</h4>
                                 <p>
                                     The interval is measured in milliseconds. It changes how often the analyzer takes in a frequency and converts it to a colour. The lower the interval, the greater the number of computations.
@@ -229,17 +222,13 @@
                                 </p>
                                 <h4>Min & Max Frequency</h4>
                                 <p>
-                                    Sound to Image works by taking the audible frequency and mapping it to the visual frequency. However, many sounds do not use the entire sound frequency and thus, the colours that correspond to those frequencies that are not played will not be displayed. By changing the Min and Max frequency, you change the scope of the audible frequency to be mapped to colours. This can allow a more dynamic colour pallet with a sound file that has a lower frequency range.  
+                                    Sound to Sight works by taking the audible frequency and mapping it to the visual frequency. However, many sounds do not use the entire sound frequency and thus, the colours that correspond to those frequencies that are not played will not be displayed. By changing the Min and Max frequency, you change the scope of the audible frequency to be mapped to colours. This can allow a more dynamic colour pallet with a sound file that has a lower frequency range.  
                                 </p>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-10 pad-0">
+                                
                                     <h4>Colour Addition Algorithms</h4>
                                     
 
-                                    <p>Since the <i>Web Audio API</i> picks up many frequencies at a given instant, it is Sound to Image's job to combine those frequencies into one colour. Sound and Image gives you three different options to combine the frequencies into colours.
+                                    <p>Since the <i>Web Audio API</i> picks up many frequencies at a given instant, it is Sound to Sight's job to combine those frequencies into one colour. Sound and Image gives you three different options to combine the frequencies into colours.
                                     </p>
                                     <h6>method 1)</h6> </p>This method takes the RGB value of each frequency at an instance and multiplies the R, G, and B values by a fraction directly related to its amplitude. The total RGB that is painted is an addition of each of the colours with non-zero amplitudes at the given instance.
                                     </p>
@@ -284,7 +273,7 @@
                 <section class="pg-section fullHeight" id="footer">
                     <div class="row fullHeight d-flex justify-content-center margin-2 ">
                         <div class="col-md-10     col-10 my-auto d-flex justify-content-center margin-2 ">
-                            <div>Sound to Image is a web application designed and written by <a href="https://georgemacrae.ca/">George Macrae</a> as an independent
+                            <div>Sound to Sight is a web application designed and written by <a href="https://georgemacrae.ca/">George Macrae</a> as an independent
                             research project for Quinn Keavery's IntD 210 Design for Screens Class at Emily Carr University of Art and Design. <a href="https://github.com/egroeg92/egroeg92.github.io/soundToSIght">Code</a>
                             </div>
                         </div>
@@ -355,7 +344,7 @@
                 <div class="row">
                 <section id="footer">
                     <div class="footer">
-                        Sound to Image is a web application designed and written by <a href="https://georgemacrae.ca/">George Macrae</a> as an independent
+                        Sound to Sight is a web application designed and written by <a href="https://georgemacrae.ca/">George Macrae</a> as an independent
                         research project for Quinn Keavery's IntD 210 Design for Screens Class at Emily Carr University of Art and Design. 
                     </div>
                 </section>

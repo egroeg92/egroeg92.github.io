@@ -1,0 +1,24 @@
+/*
+Written by George Macrae 
+using bootstrap 4
+and Handtracking API https://github.com/victordibia/handtrack.js/
+*/
+
+body {
+  color : blue;
+}
+video {
+  display : none;
+    min-width:  width:100%;
+    height:auto;
+}
+.canvasbox{
+    width: 100%;
+    height: auto;
+}
+.slider{
+    width:100%;
+}
+.row{
+    margin-bottom: 2vh;
+}

@@ -65,3 +65,18 @@ if($('.navbar').length > 0){
 
 (jQuery);
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("corner").style.paddingTop = "0rem";
+    document.getElementById("corner").style.MarginTop = "0rem";
+    
+    // document.getElementById("corner").style.paddingRight = "15rem";
+  } else {
+    document.getElementById("corner").style.paddingTop = "6rem";
+
+    // document.getElementById("corner").style.paddingRight = "0rem";
+  }
+}
+

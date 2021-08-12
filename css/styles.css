@@ -70,9 +70,11 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 body {
-  margin: 0;
-  font-family: "Rubik","Acumin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    width = 100%;
+    
+margin: 0;
+font-family: roc-grotesk, sans-serif;
+  /* font-family: roc-grotesk, "Rubik","Acumin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+    width :100%;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.6;
@@ -101,11 +103,52 @@ p {
 }
 */
 
+.star {
+    width: calc(7vw);
+    height: calc(7vw);
+    margin-top:50px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
 
+  }
+  .star2 {
+    width: calc(10vw);
+    height: calc(10vw);
+    padding:0px;
+    position: relative;
+    animation-timing-function: linear;
+    animation-name: example2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes example {
+    0%   {left:0vw; top:0rem; transform:rotate(0deg);}
+    /* 25%  {left:20rem; top:0rem;} */
+    50%  {left:15vw; top:0rem;transform:rotate(360deg)}
+    /* 75%  {left:20rem; top:0rem;} */
+    100% {left:0vw; top:0rem; transform:rotate(0deg)}
+  }
+  @keyframes example2 {
+    0%   {left:65vw; top:0rem; transform:rotate(0deg);}
+    /* 25%  {left:20rem; top:0rem;} */
+    /* 50%  {left:65vw; top:0rem;transform:rotate(720deg)} */
+    /* 75%  {left:20rem; top:0rem;} */
+    100% {left:65vw; top:0rem; transform:rotate(360deg)}
+  }
 .nameHeader{
-    padding-top:11%;
+    padding-top:10%;
     font-style: bold;
     font-size:calc(1.5rem + 2vw);
+
+}
+.nameHeader2{
+    font-style: bold;
+    font-size:calc(1.5rem + 2vw);
+
 }
 .header{
     font-style: medium;
@@ -115,9 +158,12 @@ p {
     font-size:.7rem;
     color:rgba(0,0,0,.5);
 }
-.sub-header{
+.subHeader{
+    font-family: pacifico,sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-style: medium;
-    font-size:1.5rem;
+    font-size:calc(1.25rem + 1vw);
 }
 .text-center {
    text-align:center;
@@ -127,7 +173,7 @@ p {
 }
 .paddingrtb-3{
     padding-right: 3vw;
-    padding-top:3vs;
+    padding-top:3vw;
     padding-bottom :3vw;
     padding-left:1vw;
 }
@@ -223,6 +269,22 @@ p {
 .navbar.scrolled {
     transform: translateY(-1vh);
 }
+.navbar-brand {
+    position: relative;
+    /* background: url("../pictures/star.png"); */
+    /* width: 5vw; */
+    
+    background-size: contain;
+}
+.navbar-brand>img {
+    height: 5rem;
+    padding: 15px; /* firefox bug fix */
+    width: auto;
+    animation-name: example;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
 .navbar .navbar-brand:hover{
     transform: scale(1.05,1.05);
     transition: .3s;
@@ -232,17 +294,21 @@ p {
     padding-top: 10.5rem;
     padding-bottom: 6rem;
     text-align: center;
+    
    
+}
+#corner{
+    transition: 1s;
 }
 .landing .text{
     margin-top:10vh;
 }
 
 #about{
-    min-height:100vh;
+    min-height:20vh;
 }
 #about .about{
-    padding-bottom: 5%;
+    padding-top: 5%;
 }
 #portfolio{
     margin: 0;

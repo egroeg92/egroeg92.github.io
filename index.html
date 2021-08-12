@@ -14,6 +14,8 @@ Feb 2021
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="https://use.typekit.net/xqi8hhn.css">
+
 
     <link rel="stylesheet" href="css/styles.css">
 
@@ -27,16 +29,29 @@ Feb 2021
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid">
-            <a class="navbar-brand " href="#landing">George Junichi<br>Mckibbon Macrae</a>
+            <a class="navbar-brand " href="#landing">
+                <img src="pictures/logo.png" alt=""/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             
                 <span class="navbar-toggler-icon justify-content-end"></span>
             </button>
               <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav float-right text-right pr-3">
-                  <a class="nav-item nav-link" href="#about">about</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        portfolio
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#Development">Development</a>
+                        <a class="dropdown-item" href="#Web Pages">Web Pages</a>
+                        <a class="dropdown-item" href="#Print">Print</a>
+                        <a class="dropdown-item" href="#Media">Media</a>
+                        <a class="dropdown-item" href="#Art">Art</a>
+                        </div>
+                    </li>
+                <a class="nav-item nav-link" href="#about">about</a>
+                
                   <a class="nav-item nav-link" href="#skills">skills</a>
-                  <a class="nav-item nav-link" href="#portfolio">portfolio</a>
                   <a class="nav-item nav-link" href="#contact">contact</a>
                 </div>
                 </div>
@@ -56,21 +71,31 @@ Feb 2021
                 
 <!--                landing-->
                 <section class="page-section" id="landing" >
-                    <header class="landing  ">
-                    <div class="container-fluid text " >
-                        <div class ="anim" data-anim = "anim1" data-ease="3s" data-delay = "0.1s">
-                        <div class="d-lg-none nameHeader shadow-blink-text">George Junichi<br>McKibbon Macrae</div>
+                    <header class="landing">
+                    <div class="container-fluid text ">
+                        
+                     
+                        <div class="star2">
+                            <img class = "img-fluid img-hover" src="pictures/yellowStar.png" alt=""/>
                         </div>
                         
-                        <div class ="anim" data-anim = "anim1" data-ease="3s" data-delay = ".3s">
-                            <div class="d-lg-none subHeader shadow-blink-text">Designer<br>and<br>Developer</div>
+                        <div class ="anim" data-anim = "anim1" data-ease="3s" data-delay = "0.1s">
+                            <div class="d-lg-none nameHeader2 shadow-blink-text"   >George Junichi<br>McKibbon Macrae</div>
+                        </div>
+                        
+                        <div class ="anim " data-anim = "anim1" data-ease="3s" data-delay = ".3s">
+                            <div class="d-md-none subHeader shadow-blink-text"  >Designer<br>and<br>Developer</div>
                         </div>
                         
                         <div class ="anim" data-anim = "anim1" data-ease="3s" data-delay = ".1s">
-                            <div class="d-none d-lg-block nameHeader shadow-blink-text breathing-text">George Junichi Mckibbon Macrae </div>
+                            <div class="d-none d-lg-block nameHeader2 shadow-blink-text" >George Junichi Mckibbon Macrae </div>
                         </div>
                         <div class = "anim" data-anim = "anim1" data-ease="3s" data-delay = ".3s">
-                            <div class="d-none d-lg-block subHeader shadow-blink-text">Designer and Developer</div>
+                            <div class="d-none d-md-block subHeader shadow-blink-text"  > Designer and Developer</div>
+                        </div>
+
+                        <div class="star ">
+                            <img class = "img-fluid img-hover" src="pictures/star.png" alt=""/>
                         </div>
 
                         
@@ -79,79 +104,192 @@ Feb 2021
 
                 </section>
                 
-<!--                about-->
-                <section class="page-section padding-3  vertical-center" id="about">
-                    <div class="container-fluid  ">
-                        <div class="row about">
-                            <div class="col-md-3 header d-flex  justify-content-center anim" data-anim = "anim2" data-ease="1s" data-delay = ".2s">
-                            About</div>
-                            
-<!--                            <div class = "col-lg-1 d-none d-lg-block"></div>-->
-                            <div class="col-lg-7 col-md-9 text-justify paddingrtb-3 anim" data-anim="anim1"  data-ease="3s" data-delay = ".4s">         George Macrae is a Communication and Graphic Designer who lives in Vancouver, BC.  He is currently a 3rd year Communication Design Student at Emily Carr University, and has a BSc major Computer Science minor Physics from McGill University in Quebec.
-                            <br><br>
-                            When George isn’t studying, he enjoys drawing, drinking coffee, climbing rocks and planting trees.   George has planted over 800 000 trees by hand as of 2020.</div>
-                            <div class="col-lg-2 d-none d-lg-block"></div>
-                        </div>
-                    </div>
-                </section>
 
-                <!-- Skills -->
-                <section class="page-section padding-3 vertical-center" id="skills">
-                    <div class = "container-fluid">
-                        <div class="row ">
-                            <div class ="header col-12 mb-5 d-flex  justify-content-center anim" data-anim = "anim2" data-ease="1s" data-delay = ".2s">Skills</div>
-
-                            <div class="col-lg-6 col-sm-12 mb-3" >HTML<div class="skill-bar  anim " style="--custom-width:80%" data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
-                            <div class="col-lg-6 col-sm-12 mb-3" >CSS<div class="skill-bar  anim " style="--custom-width:80%" data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
-                            <div class="col-lg-6 col-sm-12 mb-3" >JavaScript<div class="skill-bar  anim " style="--custom-width:70%" data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
-                            <div class="col-lg-6 col-sm-12 mb-3" >React.js<div class="skill-bar  anim " style="--custom-width:55%"data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
-                            <div class="col-lg-6 col-sm-12 mb-3" >Photoshop<div class="skill-bar  anim " style="--custom-width:95%"data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
-                            <div class="col-lg-6 col-sm-12 mb-3 " >Illustrator<div class="skill-bar  anim " style="--custom-width:95%"data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
-                            <div class="col-lg-6 col-sm-12 mb-3" >InDesign<div class="skill-bar  anim " style="--custom-width:95%"data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
-                            <div class="col-lg-6 col-sm-12 mb-3" >AfterEffects<div class="skill-bar  anim " style="--custom-width:65%"data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
-                        </div>
-                    </div>
-                </section>
                 
 <!--                portfolio-->
 
                 <section class="page-section padding-3 margin-t-5" id="portfolio">
                     <div class="container-fluid ">
-                        <div class="row">
 
-                            <div class="col-md-12 padding-3">  
+                        <div class="row">
+                            
+                            <div class = "row">
+                                <div class =" col-12  ">
+                                    <h1>Portfolio</h1>
+                                </div>
+                            </div>
+                            
+                            <!-- <div class="col-md-12 padding-3">   -->
                                 
                                 <div class = "row ">
+                                    <!-- DESIGN AND DEV -->
 
+
+                                    <div class="col-12  border-bottom border-dark border-4 mb-2 pb-2" id="Development">
+                                        <h3>Design & Development </h3>Web applications, programming projects, and design prototypes. 
+                                    </div>
                                     <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
                                         <div class="portfolio-item shadow-blink">
                                             <a class = "portfolio-link" href = "./soundToSight/index.html">  
                                                 <div class = "portfolio-hover">
-                                                    <div class="portfolio-hover-content">An independent Research Project. A web application that converts a sound file into an image, with Designing for Accessibility in mind.</div>
+                                                    <div class="portfolio-hover-content"> <h4>Sound-To-Site.</h4> An independent Research Project. A web application that converts a sound file into an image, with Designing for Accessibility in mind.</div>
                                                 </div>
                                                 <img class = "img-fluid img-hover " src="soundToSight/assets/cover.png" alt=""/>
                                             </a>
                                         </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
+                                        <div class="portfolio-item shadow-blink">
+                                            <a class = "portfolio-link" href = "relief.html">  
+                                                <div class = "portfolio-hover">
+                                                    <div class="portfolio-hover-content"><h4>Disaster Relief Library</h4> Prototype wireframes for an emergency relief resource sharing app. </div>
+                                                </div>
+                                                <img class = "img-fluid img-hover" src="assets/portfolio/resourceLibraryMockup/thumbnail.png" alt=""/>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
+                                        <div class="portfolio-item shadow-blink">
+                                            <a class = "portfolio-link" href = "webcam.html">  
+                                                <div class = "portfolio-hover">
+                                                    <div class="portfolio-hover-content"> <h4>Webcam Sound-Bar Contoller.</h4> Playing with different API's to manipulate a sound bar controller using a webcam.</div>
+                                                </div>
+                                                <img class = "img-fluid img-hover " src="webcam/cover.jpg" alt=""/>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    
+
+                                    <!-- WEB PAGES -->
+
+                                    <div class="col-12 border-bottom border-dark border-4 mb-2 pb-2" id="Web Pages">
+                                        <h3>Web Pages</h3>A collection of websites designed and built from scratch or from different frameworks.
+                                    </div>
+                                   
+                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
+                                        <div class="portfolio-item shadow-blink">
+                                            <a class = "portfolio-link" href = "index.html">  
+                                                <div class = "portfolio-hover">
+                                                    <div class="portfolio-hover-content"><h4>This Website</h4>This site was written from scratch in HTML, CSS and JS.  It uses Bootstrap, imports libraries from Adobe, and utilizes CSS animations </div>
+                                                </div>
+                                                <img class = "img-fluid img-hover " src="assets/portfolio/page.png" alt=""/>
+                                            </a>
+                                        </div>
                                     </div> 
 
-                                   <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
+                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
+                                        <div class="portfolio-item shadow-blink">
+                                            <a class = "portfolio-link" href = "AUBERGINE.html">  
+                                                <div class = "portfolio-hover">
+                                                    <div class="portfolio-hover-content"><h4>Aubergine Garden Design</h4>This website was made for a client using Wix.  This website was built to showcase the buisness' organic services to attract upscale clients. </div>
+                                                </div>
+                                                <img class = "img-fluid img-hover " src="assets/portfolio/Aubergine.png" alt=""/>
+                                            </a>
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
+                                        <div class="portfolio-item shadow-blink">
+                                            <a class = "portfolio-link" href = "https://www.connect.ecuad.ca/~gmacrae/">  
+                                                <div class = "portfolio-hover">
+                                                    <div class="portfolio-hover-content"><h4>Homelessness Report</h4>Based on the 2020 Metro Vancouver Homeless Report, this website was meant to educate visiters on the homelessness situation in Vancouver by visualizing statistics.  This website also provides resources and a message board built using PHP. </div>
+                                                </div>
+                                                <img class = "img-fluid img-hover " src="assets/portfolio/homelessness.png" alt=""/>
+                                            </a>
+                                        </div>
+                                    </div> 
+
+
+                                    <!-- PRINT -->
+                                    <div class="col-12 border-bottom border-dark border-4 mb-2 pb-2"id="Print">
+                                        <h3>Print</h3>Designs meant to be printed for the <i>real world</i>.
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
+                                        <div class="portfolio-item shadow-blink">
+                                            <a class = "portfolio-link" href = "5 Corners.html">  
+                                                <div class = "portfolio-hover">
+                                                    <div class="portfolio-hover-content"><h4>Five Corners Cafe</h4> I helped this client redesign their Menu and created graphics to match their brand.</div>
+                                                </div>
+                                                <img class = "img-fluid img-hover " src="assets/portfolio/5corners/posterOrange.png" alt=""/>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
                                         <div class="portfolio-item shadow-blink">
                                             <a class = "portfolio-link" href = "flaneur.html">  
                                                 <div class = "portfolio-hover">
-                                                    <div class="portfolio-hover-content">An Art Direction project to redesign a Medium.com article to fit the aesthetic of Flaneur Magazine. </div>
+                                                    <div class="portfolio-hover-content"><h4>An Art Direction Project</h4> I worked to redesign a Medium.com article to fit the aesthetic of Flaneur Magazine. </div>
                                                 </div>
                                                 <img class = "img-fluid img-hover " src="assets/portfolio/flaneur/thumbnail.png" alt=""/>
                                             </a>
                                         </div>
-                                    </div> 
-                                    
+                                    </div>
+
                                     <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
                                         <div class="portfolio-item shadow-blink">
                                             <a class = "portfolio-link" href = "DABC.html">  
                                                 <div class = "portfolio-hover">
-                                                    <div class="portfolio-hover-content"> A Co-Design Project with Disability Alliance BC to propose a new functional design for their History Wall. </div>
+                                                    <div class="portfolio-hover-content"> <h4>DABC Historywall</h4>A Co-Design Project with Disability Alliance BC to propose a new functional design for their History Wall. </div>
                                                 </div>
                                                 <img class = "img-fluid img-hover" src="assets/portfolio/histroywallDABC/Mock%20Up%201.png" alt=""/>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
+                                        <div class="portfolio-item shadow-blink">
+                                            <a class = "portfolio-link" href = "social.html">  
+                                                <div class = "portfolio-hover">
+                                                    <div class="portfolio-hover-content"><h4>A Guerilla Campaign</h4>Art Direction proposal for a proposed social initiative called Safe and Social. </div>
+                                                </div>
+                                                <img class = "img-fluid img-hover" src="assets/portfolio/social/thumbnail.png" alt=""/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
+                                        <div class="portfolio-item shadow-blink">
+                                            <a class = "portfolio-link" href = "southGran.html">  
+                                                <div class = "portfolio-hover">
+                                                    <div class="portfolio-hover-content"> <h4>Brochure Design</h4> A class project introducing Sinéad Burke to the South Granville area</div>
+                                                </div>
+                                                <img class = "img-fluid img-hover" src="assets/portfolio/southGranvilleAccessability/thumbnail.png" alt=""/>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- MEDIA -->
+                                    <div class="col-12 border-bottom border-dark border-4 mb-2 pb-2" id="Media">
+                                        <h3>Media</h3>A foray into Sound and Movement.
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
+                                        <div class="portfolio-item shadow-blink">
+                                            <a class = "portfolio-link" href = "mtv.html">  
+                                                <div class = "portfolio-hover">
+                                                    <div class="portfolio-hover-content"><h4>MTV Commercials</h4>5 second stings done to attract an audience of car park attendants to MTV. </div>
+                                                </div>
+                                                <img class = "img-fluid img-hover" src="assets/portfolio/MTV/thumbnail.png" alt=""/>
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- ART -->
+                                    <div class="col-12 border-bottom border-dark border-4 mb-2 pb-2" id="Art">
+                                        <h3>Art</h3>Illustration, Paints, and Prints.
+                                    </div>
+                                    
+                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
+                                        <div class="portfolio-item shadow-blink">
+                                            <a class = "portfolio-link" href = "patio.html">  
+                                                <div class = "portfolio-hover">
+                                                    <div class="portfolio-hover-content"> <h4>Print Making Fellowship</h4>Patio-Press x Emily Carr University fellowship 2020.</div>
+                                                </div>
+                                                <img class = "img-fluid img-hover" src="assets/portfolio/patiopress/BannockPoint.png" alt=""/>
                                             </a>
                                         </div>
                                     </div>
@@ -160,82 +298,72 @@ Feb 2021
                                         <div class="portfolio-item shadow-blink">
                                             <a class = "portfolio-link" href = "illustration.html">  
                                                 <div class = "portfolio-hover">
-                                                    <div class="portfolio-hover-content d-flex align-items-center justify-content-center"> A collection of illustrations done by George Macrae.</div>
+                                                    <div class="portfolio-hover-content"><h4>Doodles and Drawings</h4> A collection of illustrations done by George Macrae.</div>
                                                 </div>
                                                 <img class = "img-fluid img-hover" src="assets/portfolio/illustration/bikeRoomCropShadow.png" alt=""/>
                                             </a>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
-                                        <div class="portfolio-item shadow-blink">
-                                            <a class = "portfolio-link" href = "mtv.html">  
-                                                <div class = "portfolio-hover">
-                                                    <div class="portfolio-hover-content">5 second stings done to attract an audience of car park attendants to MTV. </div>
-                                                </div>
-                                                <img class = "img-fluid img-hover" src="assets/portfolio/MTV/thumbnail.png" alt=""/>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
-                                        <div class="portfolio-item shadow-blink">
-                                            <a class = "portfolio-link" href = "www.google.ca">  
-                                                <div class = "portfolio-hover">
-                                                    <div class="portfolio-hover-content"> Patio-Press x Emily Carr University fellowship 2020.</div>
-                                                </div>
-                                                <img class = "img-fluid img-hover" src="assets/portfolio/patiopress/BannockPoint.png" alt=""/>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
-                                        <div class="portfolio-item shadow-blink">
-                                            <a class = "portfolio-link" href = "relief.html">  
-                                                <div class = "portfolio-hover">
-                                                    <div class="portfolio-hover-content">Wireframes for a hypothetical  emergency relief resource sharing app mockup. </div>
-                                                </div>
-                                                <img class = "img-fluid img-hover" src="assets/portfolio/resourceLibraryMockup/thumbnail.png" alt=""/>
-                                            </a>
-                                        </div>
-                                    </div><div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
-                                        <div class="portfolio-item shadow-blink">
-                                            <a class = "portfolio-link" href = "social.html">  
-                                                <div class = "portfolio-hover">
-                                                    <div class="portfolio-hover-content">Art Direction for a proposed social initiative called Safe and Social. </div>
-                                                </div>
-                                                <img class = "img-fluid img-hover" src="assets/portfolio/social/thumbnail.png" alt=""/>
-                                            </a>
-                                        </div>
-                                    </div><div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
                                         <div class="portfolio-item shadow-blink">
                                             <a class = "portfolio-link" href = "SOL.html">  
                                                 <div class = "portfolio-hover">
-                                                    <div class="portfolio-hover-content"> Solo Art Show "Over Educated and Under Paid" at Slice of Life Gallery March 2020 in Vancouver, BC. </div>
+                                                    <div class="portfolio-hover-content"> <h4>Solo Art Show</h4> "Over Educated and Under Paid" at Slice of Life Gallery March 2020 in Vancouver, BC. </div>
                                                 </div>
                                                 <img class = "img-fluid img-hover" src="assets/portfolio/SOL/too%20many%20cans.jpg" alt=""/>
                                             </a>
                                         </div>
-                                    </div><div class="col-lg-4 col-sm-6 mb-5 anim" data-anim="anim3" data-ease="1s" data-delay = "0.2s">
-                                        <div class="portfolio-item shadow-blink">
-                                            <a class = "portfolio-link" href = "southGran.html">  
-                                                <div class = "portfolio-hover">
-                                                    <div class="portfolio-hover-content"> Brochure design introducing Sinéad Burke to the South Granville area</div>
-                                                </div>
-                                                <img class = "img-fluid img-hover" src="assets/portfolio/southGranvilleAccessability/thumbnail.png" alt=""/>
-                                            </a>
-                                        </div>
                                     </div>
-                                </div>
                             
 
                             
                             
-                            </div>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </section>
 
+<!--                about-->
+<section class="page-section padding-3  vertical-center" id="about">
+    <div class="container-fluid  ">
+        <div class="row about">
+            <div class="col-md-3 header d-flex  justify-content-center anim" data-anim = "anim2" data-ease="1s" data-delay = ".2s">
+            About</div>
+            
+<!--                            <div class = "col-lg-1 d-none d-lg-block"></div>-->
+            <div class="col-lg-7 col-md-9 text-justify paddingrtb-3 anim" data-anim="anim1"  data-ease="3s" data-delay = ".4s">         
+                George Macrae is a Designer and Developer who lives in Vancouver, BC. He is currently a 4th year Communication Design Student at Emily Carr University, and has a BSc major Computer Science minor Physics from McGill University in Quebec.
+                <br><Br>
+                George’s focus is to combine his expertise in Development with his passion for Design to create practical and meaningful products.
+                </div>
+            <div class="col-lg-2 d-none d-lg-block"></div>
+        </div>
+    </div>
+</section>
 
+<!-- Skills -->
+<section class="page-section padding-3 vertical-center" id="skills">
+    <div class = "container-fluid">
+        <div class="row ">
+            <div class="col-md-3 header d-flex  justify-content-center anim" data-anim = "anim2" data-ease="1s" data-delay = ".2s">
+                Skills</div>
+            
+            <div class="col-lg-7 col-md-9 ">
+                <div class="row ">
+                <div class="col-lg-6 col-sm-12 p-0 mb-3 " >HTML<div class="skill-bar  anim " style="--custom-width:80%" data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
+                <div class="col-lg-6 col-sm-12 p-0 mb-3" >CSS<div class="skill-bar  anim " style="--custom-width:80%" data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
+                <div class="col-lg-6 col-sm-12 p-0 mb-3" >JavaScript<div class="skill-bar  anim " style="--custom-width:70%" data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
+                <div class="col-lg-6 col-sm-12 p-0 mb-3" >React.js<div class="skill-bar  anim " style="--custom-width:55%"data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
+                <div class="col-lg-6 col-sm-12 p-0 mb-3" >Photoshop<div class="skill-bar  anim " style="--custom-width:95%"data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
+                <div class="col-lg-6 col-sm-12 p-0 mb-3 " >Illustrator<div class="skill-bar  anim " style="--custom-width:95%"data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
+                <div class="col-lg-6 col-sm-12 p-0 mb-3" >InDesign<div class="skill-bar  anim " style="--custom-width:95%"data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
+                <div class="col-lg-6 col-sm-12 p-0 mb-3" >AfterEffects<div class="skill-bar  anim " style="--custom-width:65%"data-anim="bar-anim" data-ease="2s" data-delay = ".1s"></div></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
         
             
             <div class="col-md-1 d-none d-sm-block"></div>
